@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -I./include
-LDFLAGS = 
+LDFLAGS = -ljson-c
 
 SRCDIR = src
 OBJDIR = obj

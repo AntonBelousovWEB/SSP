@@ -10,6 +10,7 @@ typedef struct {
 typedef struct {
     char* title;
     char* content;
+    size_t content_size;
     SPPLink* links;
     int link_count;
 } SPPSection;

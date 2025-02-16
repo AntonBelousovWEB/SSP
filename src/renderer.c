@@ -20,7 +20,7 @@ void render_spp_file(int client_socket, const SPPFile* file, const char* site_na
             const SPPLink* link = &section->links[j];
             if (link->number == 0) {
                 // Internal page link
-                dprintf(client_socket, "  \033[34m@page %s\033[0m\n", link->text);
+                dprintf(client_socket, "  \033[34m%s\033[0m\n", link->text);
             } else {
                 // External link
                 dprintf(client_socket, "  \033[34m[%d] %s - %s\033[0m\n", link->number, link->text, link->url);
@@ -30,5 +30,5 @@ void render_spp_file(int client_socket, const SPPFile* file, const char* site_na
         dprintf(client_socket, "\n");
     }
 
-    dprintf(client_socket, "\nTo open a linked page, use: open superpuper://%s/<page_name>.spp\n", site_name);
+    dprintf(client_socket, "\nTo open a linked page, use: <page_name>.spp\n");
 }
